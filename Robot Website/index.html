@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle's Ecommerce website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kyle's Robot Store</h1>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="#" onclick="openShopModal()">Shop</a>
+            <a href="#" onclick="openAboutusModal()">About us</a>
+            <a href="#" onclick="openBasketModal();">Basket<span id="basketCount"></span></a>
+        </nav>
+    </header>
+
+<main>
+
+    <div class="discountContainer">
+        <h2>OUR BEST OFFER FOR 2023</h2>
+        <div class="textbox">
+        <p>We're thrilled to offer a limited-time discount of 40% on our latest small robot with 2 wheels that can navigate through tight spaces with ease. This robot also comes equipped with an advanced AI camera that can capture and transmit real-time images and videos to your device. Don't miss this opportunity to get your hands on this versatile and intelligent robot at an incredible price!</p>
+        </div>
+        <img src="/assets/pexels-kindel-media-8982693.jpg" alt="" height="400px" width="300">
+       
+    </div>
+    <div id="aboutUsModal">
+        <button onclick="closeAboutusModal()">X</button>
+        <p>Kyle's Robot Store - Your one-stop-shop for innovative robotic solutions that will transform the way you live and work!</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.53879901538!2d-2.240931470449931!3d53.481002470556604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c6e81327a3%3A0xa82fdafd97888765!2sOffice%20Principles!5e0!3m2!1sen!2suk!4v1677529290197!5m2!1sen!2suk" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div id="checkoutModal">
+        <button onclick="closeCheckoutModal()">X</button>
+        <form>
+            <form action="process-payment.php" method="POST">
+                <label for="name">Name on Card:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label for="card_number">Card Number:</label>
+                <input type="text" id="card_number" name="card_number" required><br>
+        
+                <label for="expiry_date">Expiry Date:</label>
+                <input type="text" id="expiry_date" name="expiry_date" required placeholder="MM/YY"><br>
+        
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required><br>
+        
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" min="0" step="0.01" required><br>
+        
+                <button type="submit">Checkout</button>
+            </form>
+        </form>
+    </div>
+    <section id="shopModal">
+        <button id="closeShop" onclick="closeShopModal()">X</button>
+     
+        <table>
+            <thead>
+                <tr>
+              
+                
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="product1">
+                    <td><img src="/assets/pexels-kindel-media-8566428.jpg" alt="Product 1" class="product-image"></td>
+                    <td>Introducing our latest robot product: the Lift & Roll Robot! This innovative robot is equipped with wheels for easy mobility and a lifting mechanism that can handle small items up to 5 lbs.</td>
+                    <td>399.99</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-cottonbro-studio-4107248.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Our AI-powered vacuum cleaner uses advanced sensors and machine learning algorithms to navigate your home and clean it thoroughly, even in hard-to-reach areas. With its intuitive interface and self-charging capability, it makes cleaning effortless and convenient.</td>
+                    <td>220.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-kindel-media-8566474.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Introducing our latest robot product: the Lift & Roll Robot! This innovative robot is equipped with wheels for easy mobility and a lifting mechanism that can handle small items up to 5 lbs.</td>
+                    <td>920.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-pavel-danilyuk-8438868.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Introducing our latest robot product: the Lift & Roll Robot! This innovative robot is equipped with wheels for easy mobility and a lifting mechanism that can handle small items up to 5 lbs.</td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-pavel-danilyuk-8294558.jpg" alt="Product 2" class="product-image"></td>
+                    <td></td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-kindel-media-9029795.jpg" alt="Product 2" class="product-image"></td>
+                    <td></td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-tara-winstead-8386429.jpg" alt="Product 2" class="product-image"></td>
+                    <td></td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-cottonbro-studio-6153356.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Product 2 description</td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-cottonbro-studio-6856825.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Product 2 description</td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-kindel-media-8982691.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Product 2 description</td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+                <tr>
+                    <td><img src="/assets/pexels-kindel-media-8982693.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Product 2 description</td>
+                    <td>20.00</td>
+                    <td><button class="add-to-basket">Add to Basket</button></td>
+                </tr>
+
+            
+            </tbody>
+
+
+        </table>
+
+    </section>
+
+
+    <div class="solutions">
+          <h2 class="typing-text1">Innovating.</h2>
+          <h2 class="typing-text2">Creative.</h2>
+          <h2 class="typing-text3">Solutions.</h2>
+</div>
+    <div class="animatingText">
+          <h2 class="typing-text"> AI-powered Robots designed to create solutions for many problems</h2>
+    </div>
+
+    <div id="basketModal">
+        <button id="closeShop" onclick="closeBasketModal()">X</button>
+
+
+
+        <button id="clearBasketButton" >Clear</button>
+        <table id="basketTable">
+            <button id="checkout" onclick="openCheckoutModal()">Checkout</button>
+        </table>
+</div>
+</main>
+
+<footer> <h2>Copyright @Kyle 2023 </h2>
+    <br>
+    <h4>Address</h4>
+    <br> <h4>10 Smith Road,
+        Manchester
+        M32 120
+    </h4>
+
+
+</footer>
+</body>
+<script src="script.js"></script>
+</html>

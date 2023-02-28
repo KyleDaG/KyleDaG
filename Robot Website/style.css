@@ -1,0 +1,494 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    background-color: #000000;
+    color: aliceblue;
+    font-size: 25px;
+    border: 5px solid white;
+  }
+
+  header h1{
+    padding: 30px;
+  }
+
+  header nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 70px;
+    padding: 30px;
+    margin-left: 500px;
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bolder;
+  }
+
+  header nav a:hover {
+    color: cadetblue;
+  }
+
+  main {
+    z-index: 1;
+    background-color: black;
+    display: flex;
+    height: 800px;
+  }
+
+  main h2{
+    display: flex;
+    font-size: 65px;
+    margin: 30px;
+    color: aliceblue;
+  }
+  main #shopModal{
+    display: none;
+    z-index: 2;
+    width: 55%;
+    margin-left: 200px;
+    position: absolute;
+    height: 800px;
+    background-color: #000000;
+    overflow-y: scroll;
+    transform: translate(-180px);
+  }
+
+  main #shopModal h2 {
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    padding-bottom: 30px;
+    text-decoration: underline;
+  }
+
+  main #shopModal #closeShop{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background-color: #b61c1c;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    margin-left: 96%;
+    border: none;
+    margin-top: 2px;
+  }
+  main #shopModal button:hover {
+    background-color: #b34a4a;
+  }
+  main #shopModal table {
+    width: 100%;
+    font-size: 14px;
+    overflow-y: scroll;
+    height: 200px;
+    background-color: #000000;
+  }
+
+  main #shopModal table th, td {
+    text-align: left;
+    padding: 8px;
+    border: solid 5px rgb(255, 255, 255);
+  }
+
+  main #shopModal table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  main #shopModal tr:nth-child(even) {
+    background-color: #000000;
+    border: 2px solid rgb(243, 237, 237);
+    color: aliceblue;
+  }
+
+  main #shopModal tr:nth-child(odd) {
+    background-color: #000000;
+    border: 1px solid rgb(255, 255, 255);
+    color: aliceblue;
+  }
+
+
+  main #shopModal .product-image {
+    width: 400px;
+  }
+
+  main #shopModal .add-to-basket {
+    background-color: #248394;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 70px;
+    padding: 3px;
+    font-weight: bolder;
+  } 
+
+  main #mainImg {
+    height: 300px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    transform: translate(800px);
+    position: absolute;
+  }
+
+  main .discountContainer {
+    border: 4px white solid;
+    height: 600px;
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    transform: translate(1200px) translateY(100px);
+    position: absolute;
+    color: white;
+    font-weight: bolder;
+  }
+
+  main .discountContainer .textbox p{
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    transform: translate(4px) translateY(230px);
+    height: 250px;
+    width: 600px;
+  }
+
+  main .discountContainer h2 {
+    transform: translate(270px) translateY(-50px);
+  }
+
+  main .discountContainer img {
+    transform: translate(-300px) translateY(-50px);
+  }
+  main #basketModal {
+    display: none;
+    height: 80vh;
+    transform: translate(1253px);
+    width: 650px;
+    background-color: #000000;
+    z-index: 6;
+    position: absolute;
+    font-size: 15px;
+    border: 4px solid white;
+    overflow-y: scroll;
+  }
+
+  main #basketModal table {
+    background-color: #000000;
+    color: white;
+  }
+
+  main #basketModal table td {
+    background-color: #000000;
+  }
+
+  main #basketModal h2{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: underline;
+  } 
+
+  main #basketModal button{
+   margin: 20px;
+   justify-content: space-evenly;
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #248394;
+   border: none;
+   color: white;
+   font-weight: bolder;
+   font-size: 20px;
+
+  }
+  main #basketModal button:hover{
+    background-color: #b34a4a;
+  }
+
+  main #basketModal #closeShop {
+    background-color: #b61c1c;
+  }
+  main #basketModal tr:nth-child(even) {
+    background-color: #f2f2f2;
+    border: 2px solid black;
+  }
+
+  main #basketModal tr:nth-child(odd) {
+    background-color: #f2f2f2;
+    border: 2px solid black;
+  }
+
+  .typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .12em;
+    font-size: 25px;
+    animation: typing 12.5s steps(40, end) infinite;
+  }
+
+  .typing-text1 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .12em;
+    font-size: 85px;
+    animation: typing 5.5s steps(40, end) infinite;
+    
+  }
+
+  .typing-text2 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .12em;
+    font-size: 85px;
+    animation: typing 6.5s steps(40, end) infinite;
+    color: #b61c1c;
+  }
+
+  .typing-text3 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .12em;
+    font-size: 85px;
+    animation: typing 7.5s steps(40, end) infinite;
+    color: #248394;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  .animatingText {
+    width: 1080px;
+    transform: translateY(480px) translate(105px);
+    border: aliceblue 1px solid;
+    height: 30px;
+    position: absolute;
+  }
+
+  .solutions {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    transform: translateY(80px) translate(205px);
+    position: absolute;
+  }
+
+  footer {
+    display: flex;
+    background-color: #000000;
+    color: aliceblue;
+    height: 200px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+  }
+
+  main #checkoutModal {
+    height: 500px;
+    width: 400px;
+    display: none;
+    background-color: #000000;
+    border: 4px solid white;
+    transform: translate(500px) translateY(100px);
+    z-index: 4;
+    color: aliceblue;
+  }
+
+  main #checkoutModal form {
+    padding: 100px;
+  }
+
+  main #aboutUsModal {
+    background-color: #000000;
+    width: 800px;
+    height: 630px;
+    transform: translate(600px) translateY(80px);
+    z-index: 5;
+    display: none;
+    color: white;
+    border: 4px white solid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main #aboutUsModal iframe {
+    margin-left: 180px;
+    margin-bottom: 100px;
+  }
+  
+  main #aboutUsModal button{
+    background-color: #b61c1c;
+    color: white;
+    padding: 2px;
+  }
+
+  main #aboutUsModal p {
+    display: flex;
+    padding: 50px;
+
+  }
+
+
+  footer h4, h6 {
+    padding: 30px;
+    display: flex;
+  }
+
+
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  header nav {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  main {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #shopModal {
+    margin-left: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  main #shopModal .product-image {
+    width: 100%;
+  }
+  main #mainImg {
+    height: 200px;
+    width: 300px;
+    margin: 50px;
+    transform: none;
+  }
+  main .discountContainer {
+    height: auto;
+    width: 100%;
+    transform: none;
+    padding: 30px;
+    font-size: 18px;
+  }
+  main .discountContainer .textbox p{
+    height: auto;
+    width: 100%;
+    transform: none;
+    margin-top: 20px;
+  }
+  main .discountContainer h2 {
+    transform: none;
+    margin-top: 20px;
+  }
+  main .discountContainer img {
+    transform: none;
+    width: 100%;
+  }
+  main #basketModal {
+    transform: none;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+  }
+  main #basketModal table {
+    font-size: 18px;
+  }
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+    padding: 10px;
+  }
+  header nav {
+    gap: 20px;
+    padding: 10px;
+  }
+  main h2 {
+    font-size: 40px;
+    margin: 20px;
+  }
+  main #shopModal table {
+    font-size: 12px;
+  }
+  main #shopModal .add-to-basket {
+    font-size: 12px;
+    width: 60px;
+    margin: 2px;
+    padding: 2px;
+  }
+  main #mainImg {
+    height: 150px;
+    width: 200px;
+    margin: 30px;
+  }
+  main .discountContainer {
+    height: auto;
+    width: 100%;
+    transform: none;
+    padding: 20px;
+    font-size: 14px;
+  }
+  main .discountContainer .textbox p{
+    height: auto;
+    width: 100%;
+    transform: none;
+    margin-top: 10px;
+  }
+  main .discountContainer h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  main .discountContainer img {
+    transform: none;
+    width: 100%;
+  }
+  main #basketModal {
+    font-size: 14px;
+  }
+  main #basketModal table {
+    font-size: 14px;
+  }
+}
